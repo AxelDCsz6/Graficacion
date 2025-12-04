@@ -1,8 +1,8 @@
 # Apuntes y Prácticas de Graficación  
-**Alumno:** Dueñas Cantero Axel Alberto 
-**Número de Control:** 23121056 
-**Profesor:** Jesus Eduardo Alcaraz Chavez 
-**Material de Referencia:** https://ealcaraz85.github.io/Graficacion.io/ 
+**Alumno:** Dueñas Cantero Axel Alberto   
+**Número de Control:** 23121056   
+**Profesor:** Jesus Eduardo Alcaraz Chavez   
+**Material de Referencia:** https://ealcaraz85.github.io/Graficacion.io/   
 
 ---
 
@@ -13,20 +13,20 @@ El contenido se encuentra organizado en carpetas que agrupan diferentes práctic
 
 ---
 
-## Contenido del repositorio  
-
-### OpenGL  
-### Calculadora  
-### Capa de Harry Potter
-### Caras
-### Detección de manos  
-### Dibujo de astronauta  
-### Paramétricas  
-### Pixel Art  
-### Pong  
-### Proyecto final  
+## Objetivo general del repositorio  
+Este repositorio funciona como un conjunto de prácticas que serviran como material de reapso cuando sea necesario la revision de utilidades graficas principalmente en entornos de programación con Python
 
 ---
 
-## Objetivo general del repositorio  
-Este repositorio funciona como un conjunto de prácticas que serviran como material de reapso cuando sea necesario la revision de utilidades graficas principalmente en entornos de programación con Python
+## Contenido del repositorio  
+
+### [OpenGL](OpenGL/) 
+### [Calculadora](calculadora/)  
+### [Capa de Harry Potter](capa_HP/)  
+### [Caras](caras/)  
+### [Detección de manos](deteccion_manos/) 
+### [Dibujo de astronauta](dibujo_astronauta/) 
+### [Paramétricas](parametricas/) 
+### [Pixel Art](pixelart/) 
+### [Pong](pong/)  
+### [Proyecto final](proyecto_final/)  
