@@ -1,3 +1,27 @@
+<<<<<<< HEAD
+import cv2
+=======
+<<<<<<< HEAD
+import math
+import cv2 as cv
+>>>>>>> c2e4541 (Proyecto final: Filtro y otras actividades, mejoras en el proyecto de la pizarra y creacion de archivos extra como requirements entre otros)
+import numpy as np
+
+# Definir los parámetros iniciales
+width, height = 1000, 1000  # Ampliar la ventana para ver toda la figura
+img = np.ones((height, width, 3), dtype=np.uint8) * 255
+
+# Parámetros de la curva de Limacon
+a, b = 150, 100  # Reducir los valores de a y b para que la curva se ajuste mejor
+k = 0.7  # Constante de multiplicación del ángulo
+theta_increment = 0.05  # Incremento del ángulo
+max_theta = 2 * np.pi  # Un ciclo completo
+
+<<<<<<< HEAD
+=======
+if __name__ == "__main__":
+    main()
+=======
 import cv2
 import numpy as np
 
@@ -11,6 +35,7 @@ k = 0.7  # Constante de multiplicación del ángulo
 theta_increment = 0.05  # Incremento del ángulo
 max_theta = 2 * np.pi  # Un ciclo completo
 
+>>>>>>> c2e4541 (Proyecto final: Filtro y otras actividades, mejoras en el proyecto de la pizarra y creacion de archivos extra como requirements entre otros)
 # Centro de la imagen
 center_x, center_y = width // 2, height // 2
 
@@ -51,3 +76,7 @@ while True:  # Bucle infinito
 
 # Cerrar la ventana al finalizar
 cv2.destroyAllWindows()
+<<<<<<< HEAD
+=======
+>>>>>>> fb0261f (.)
+>>>>>>> c2e4541 (Proyecto final: Filtro y otras actividades, mejoras en el proyecto de la pizarra y creacion de archivos extra como requirements entre otros)

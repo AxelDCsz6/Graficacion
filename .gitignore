@@ -1,3 +1,22 @@
+<<<<<<< HEAD
+venv/
+env/
+ENV/
+*.venv/
+.vscode/
+
+=======
+<<<<<<< HEAD
+>>>>>>> c2e4541 (Proyecto final: Filtro y otras actividades, mejoras en el proyecto de la pizarra y creacion de archivos extra como requirements entre otros)
+graf/
+mediapipe/
+
+__pycache__/
+<<<<<<< HEAD
+=======
+*.pyc
+*.pyo
+=======
 venv/
 env/
 ENV/
@@ -8,6 +27,7 @@ graf/
 mediapipe/
 
 __pycache__/
+>>>>>>> c2e4541 (Proyecto final: Filtro y otras actividades, mejoras en el proyecto de la pizarra y creacion de archivos extra como requirements entre otros)
 *.py[cod]
 *$py.class
 
@@ -53,3 +73,7 @@ Thumbs.db
 
 temp/
 tmp/
+<<<<<<< HEAD
+=======
+>>>>>>> fb0261f (.)
+>>>>>>> c2e4541 (Proyecto final: Filtro y otras actividades, mejoras en el proyecto de la pizarra y creacion de archivos extra como requirements entre otros)

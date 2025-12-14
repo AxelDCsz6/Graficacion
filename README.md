@@ -1,3 +1,48 @@
+<<<<<<< HEAD
+# 🎨 Procesamiento Digital de Imágenes con OpenCV y MediaPipe
+=======
+<<<<<<< HEAD
+# Apuntes y Prácticas de Graficación  
+**Alumno:** Dueñas Cantero Axel Alberto   
+**Número de Control:** 23121056   
+**Profesor:** Jesus Eduardo Alcaraz Chavez   
+**Material de Referencia:** https://ealcaraz85.github.io/Graficacion.io/   
+>>>>>>> c2e4541 (Proyecto final: Filtro y otras actividades, mejoras en el proyecto de la pizarra y creacion de archivos extra como requirements entre otros)
+
+Repositorio académico que contiene implementaciones de algoritmos de procesamiento digital de imágenes, visión por computadora y aplicaciones interactivas usando OpenCV y MediaPipe.
+
+## 📋 Descripción
+
+Este repositorio reúne una colección de proyectos y algoritmos implementados en Python para el procesamiento digital de imágenes, incluyendo detección de objetos, manipulación de píxeles, transformaciones geométricas, visión por computadora en tiempo real y aplicaciones interactivas.
+
+## 🛠️ Tecnologías Utilizadas
+
+- **OpenCV 4.x** - Procesamiento de imágenes y visión computacional
+- **MediaPipe** - Detección de manos y seguimiento facial
+- **NumPy** - Cálculos numéricos y manipulación de matrices
+- **Matplotlib** - Visualización de datos e imágenes
+
+## 📁 Estructura del Proyecto
+
+### 01_Introduccion_OpenCV
+Scripts básicos para familiarizarse con OpenCV:
+- `first_script_opencv.py` - Primer contacto con OpenCV
+- `img_cv.py` - Conversiones entre espacios de color
+- `video.py` - Procesamiento básico de video
+
+<<<<<<< HEAD
+=======
+### [OpenGL](OpenGL/) 
+### [Calculadora](calculadora/)  
+### [Capa de Harry Potter](capa_HP/)  
+### [Caras](caras/)  
+### [Detección de manos](deteccion_manos/) 
+### [Dibujo de astronauta](dibujo_astronauta/) 
+### [Paramétricas](parametricas/) 
+### [Pixel Art](pixelart/) 
+### [Pong](pong/)  
+### [Proyecto final](proyecto_final/)  
+=======
 # 🎨 Procesamiento Digital de Imágenes con OpenCV y MediaPipe
 
 Repositorio académico que contiene implementaciones de algoritmos de procesamiento digital de imágenes, visión por computadora y aplicaciones interactivas usando OpenCV y MediaPipe.
@@ -21,6 +66,7 @@ Scripts básicos para familiarizarse con OpenCV:
 - `img_cv.py` - Conversiones entre espacios de color
 - `video.py` - Procesamiento básico de video
 
+>>>>>>> c2e4541 (Proyecto final: Filtro y otras actividades, mejoras en el proyecto de la pizarra y creacion de archivos extra como requirements entre otros)
 ### 02_Operadores_Puntuales
 Manipulación directa de píxeles:
 - `operador_puntual.py` - Transformaciones pixel a pixel
@@ -75,3 +121,7 @@ Detección y análisis facial:
 
 ### Requisitos Previos
 Python 3.8 o superior
+<<<<<<< HEAD
+=======
+>>>>>>> fb0261f (.)
+>>>>>>> c2e4541 (Proyecto final: Filtro y otras actividades, mejoras en el proyecto de la pizarra y creacion de archivos extra como requirements entre otros)

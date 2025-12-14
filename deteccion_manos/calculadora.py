@@ -2,11 +2,27 @@ import cv2
 import mediapipe as mp
 import time
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+# Inicializar MediaPipe Hands
+>>>>>>> c2e4541 (Proyecto final: Filtro y otras actividades, mejoras en el proyecto de la pizarra y creacion de archivos extra como requirements entre otros)
 mp_hands = mp.solutions.hands
 mp_drawing = mp.solutions.drawing_utils
 hands = mp_hands.Hands(static_image_mode=False, max_num_hands=2, min_detection_confidence=0.5)
 cap = cv2.VideoCapture(0)
 
+<<<<<<< HEAD
+=======
+# Variables para la calculadora
+=======
+mp_hands = mp.solutions.hands
+mp_drawing = mp.solutions.drawing_utils
+hands = mp_hands.Hands(static_image_mode=False, max_num_hands=2, min_detection_confidence=0.5)
+cap = cv2.VideoCapture(0)
+
+>>>>>>> fb0261f (.)
+>>>>>>> c2e4541 (Proyecto final: Filtro y otras actividades, mejoras en el proyecto de la pizarra y creacion de archivos extra como requirements entre otros)
 current_number = ""
 current_operator = ""
 first_number = None
@@ -16,6 +32,13 @@ input_mode = "first"  # "first", "operator", "second"
 selection_start_time = None
 selected_button = None
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+# Definir los botones de la calculadora
+=======
+>>>>>>> fb0261f (.)
+>>>>>>> c2e4541 (Proyecto final: Filtro y otras actividades, mejoras en el proyecto de la pizarra y creacion de archivos extra como requirements entre otros)
 buttons = {
     '7': (50, 100), '8': (150, 100), '9': (250, 100), '/': (350, 100),
     '4': (50, 200), '5': (150, 200), '6': (250, 200), '*': (350, 200),
@@ -27,9 +50,23 @@ button_size = 80
 
 def draw_calculator(frame):
     """Dibuja la interfaz de la calculadora"""
+<<<<<<< HEAD
     cv2.rectangle(frame, (50, 30), (350, 80), (255, 255, 255), -1)
     cv2.rectangle(frame, (50, 30), (350, 80), (0, 0, 0), 2)
     
+=======
+<<<<<<< HEAD
+    # Dibajar display
+    cv2.rectangle(frame, (50, 30), (350, 80), (255, 255, 255), -1)
+    cv2.rectangle(frame, (50, 30), (350, 80), (0, 0, 0), 2)
+    
+    # Mostrar operación actual
+=======
+    cv2.rectangle(frame, (50, 30), (350, 80), (255, 255, 255), -1)
+    cv2.rectangle(frame, (50, 30), (350, 80), (0, 0, 0), 2)
+    
+>>>>>>> fb0261f (.)
+>>>>>>> c2e4541 (Proyecto final: Filtro y otras actividades, mejoras en el proyecto de la pizarra y creacion de archivos extra como requirements entre otros)
     display_text = ""
     if first_number is not None:
         display_text += str(first_number)
@@ -42,6 +79,13 @@ def draw_calculator(frame):
     
     cv2.putText(frame, display_text, (60, 70), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 0), 2)
     
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    # Dibujar botones
+=======
+>>>>>>> fb0261f (.)
+>>>>>>> c2e4541 (Proyecto final: Filtro y otras actividades, mejoras en el proyecto de la pizarra y creacion de archivos extra como requirements entre otros)
     for btn, (x, y) in buttons.items():
         color = (200, 200, 200)
         if btn in ['/', '*', '-', '+']:
@@ -173,6 +217,13 @@ while True:
                     elif current_button == 'C':
                         reset_calculator()
                     
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                    # Reiniciar temporizador después de la selección
+=======
+>>>>>>> fb0261f (.)
+>>>>>>> c2e4541 (Proyecto final: Filtro y otras actividades, mejoras en el proyecto de la pizarra y creacion de archivos extra como requirements entre otros)
                     selection_start_time = None
                     selected_button = None
         else:
@@ -181,8 +232,23 @@ while True:
     
     cv2.imshow("Calculadora con Manos", frame)
     
+<<<<<<< HEAD
+    if cv2.waitKey(1) & 0xFF == 27: 
+=======
+<<<<<<< HEAD
+    if cv2.waitKey(1) & 0xFF == 27:  # Presionar ESC para salir
+>>>>>>> c2e4541 (Proyecto final: Filtro y otras actividades, mejoras en el proyecto de la pizarra y creacion de archivos extra como requirements entre otros)
+        break
+
+cap.release()
+cv2.destroyAllWindows()
+<<<<<<< HEAD
+=======
+=======
     if cv2.waitKey(1) & 0xFF == 27: 
         break
 
 cap.release()
 cv2.destroyAllWindows()
+>>>>>>> fb0261f (.)
+>>>>>>> c2e4541 (Proyecto final: Filtro y otras actividades, mejoras en el proyecto de la pizarra y creacion de archivos extra como requirements entre otros)

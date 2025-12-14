@@ -1,4 +1,18 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+numpy==1.26.4
+matplotlib==3.8.0
+opencv-python==4.10.0.84
+mediapipe==0.10.21
+glfw==2.10.0
+=======
+>>>>>>> c2e4541 (Proyecto final: Filtro y otras actividades, mejoras en el proyecto de la pizarra y creacion de archivos extra como requirements entre otros)
 opencv-python==4.8.0.74
 mediapipe==0.10.0
 numpy==1.24.3
 matplotlib==3.7.1
+<<<<<<< HEAD
+=======
+>>>>>>> fb0261f (.)
+>>>>>>> c2e4541 (Proyecto final: Filtro y otras actividades, mejoras en el proyecto de la pizarra y creacion de archivos extra como requirements entre otros)
