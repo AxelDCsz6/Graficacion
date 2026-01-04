@@ -1,127 +1,128 @@
-<<<<<<< HEAD
-# 🎨 Procesamiento Digital de Imágenes con OpenCV y MediaPipe
-=======
-<<<<<<< HEAD
-# Apuntes y Prácticas de Graficación  
-**Alumno:** Dueñas Cantero Axel Alberto   
-**Número de Control:** 23121056   
-**Profesor:** Jesus Eduardo Alcaraz Chavez   
-**Material de Referencia:** https://ealcaraz85.github.io/Graficacion.io/   
->>>>>>> c2e4541 (Proyecto final: Filtro y otras actividades, mejoras en el proyecto de la pizarra y creacion de archivos extra como requirements entre otros)
+# Graficación - Portafolio de Proyectos
 
-Repositorio académico que contiene implementaciones de algoritmos de procesamiento digital de imágenes, visión por computadora y aplicaciones interactivas usando OpenCV y MediaPipe.
+**Alumno:** Dueñas Cantero Axel Alberto  
+**Número de Control:** 23121056  
+**Profesor:** Jesús Eduardo Alcaraz Chávez  
+**Material de Referencia:** [https://ealcaraz85.github.io/Graficacion.io/](https://ealcaraz85.github.io/Graficacion.io/)
 
-## 📋 Descripción
+---
 
-Este repositorio reúne una colección de proyectos y algoritmos implementados en Python para el procesamiento digital de imágenes, incluyendo detección de objetos, manipulación de píxeles, transformaciones geométricas, visión por computadora en tiempo real y aplicaciones interactivas.
+## Introducción
 
-## 🛠️ Tecnologías Utilizadas
+Este repositorio contiene una colección de proyectos desarrollados en el marco de la materia de Graficación. Los trabajos abarcan desde técnicas básicas de procesamiento de imágenes hasta aplicaciones interactivas con visión por computadora, integrando librerías como OpenCV, MediaPipe y OpenGL. Cada proyecto tiene como objetivo demostrar la aplicación práctica de conceptos clave en el área, desde operadores puntuales hasta realidad aumentada y detección facial.
 
-- **OpenCV 4.x** - Procesamiento de imágenes y visión computacional
-- **MediaPipe** - Detección de manos y seguimiento facial
-- **NumPy** - Cálculos numéricos y manipulación de matrices
-- **Matplotlib** - Visualización de datos e imágenes
+---
 
-## 📁 Estructura del Proyecto
+## Estructura del Repositorio
 
-### 01_Introduccion_OpenCV
-Scripts básicos para familiarizarse con OpenCV:
-- `first_script_opencv.py` - Primer contacto con OpenCV
-- `img_cv.py` - Conversiones entre espacios de color
-- `video.py` - Procesamiento básico de video
+- [calculadora.py](#calculadora) – Calculadora interactiva controlada por gestos manuales.
+- [invisibilidad.py](#invisibilidad) – Efecto de camuflaje mediante sustitución de fondo.
+- [deteccion.py](#deteccion) – Detector de rostros con animaciones gráficas.
+- [centroide.py](#centroide) – Cálculo de centroides en figuras geométricas.
+- [centroide2.py](#centroide2) – Cálculo manual de centroides sin uso de contornos.
+- [centroide_sin_contorno.py](#centroide_sin_contorno) – Cálculo de centroides globales por conectividad.
+- [agrandar_cuadrado.py](#agrandar_cuadrado) – Control de tamaño de un cuadrado mediante distancia entre pulgares.
+- [distancia.py](#distancia) – Similar al anterior, con medición de distancia en tiempo real.
+- [manos.py](#manos) – Detección y seguimiento de manos con MediaPipe.
+- [figura.py](#figura) – Creación de una figura de astronauta usando primitivas gráficas.
+- [operador_puntual.py](#operador_puntual) – Aplicación de un operador puntual de umbralización.
+- [rotacion.py](#rotacion) – Rotación manual de una imagen usando transformaciones geométricas.
+- [split_merge.py](#split_merge) – Separación y recombinación de canales de color.
+- [video.py](#video) – Procesamiento de video en tiempo real con división de canales.
+- [Introduccion.py](#introduccion) – Introducción a OpenGL con GLFW, dibujo de primitivas.
+- [piramide.py](#piramide) – Pirámide 3D en rotación continua con OpenGL.
+- [parametricas.py](#parametricas) – Animación de una curva paramétrica
+- [pixel_art.py](#pixel_art) – Generación de un robot estilo pixel art.
+- [pong.py](#pong) – Implementación básica del juego Pong con OpenCV.
+- [varita_magica.py](#varita_magica) – Sistema de pintura virtual controlado por color.
+- [varita_magica_2.py](#varita_magica_2) – Versión extendida con múltiples colores y figuras.
+- [deteccion_rostro.py](#deteccion_rostro) – Filtro de máscara facial 3D con MediaPipe.
+- [filto.py](#filto) – Primer prototipo de filtro tipo Snapchat con animaciones básicas.
+- [filto2.py](#filto2) – Versión mejorada del filtro, con más elementos y estabilidad.
 
-<<<<<<< HEAD
-=======
-### [OpenGL](OpenGL/) 
-### [Calculadora](calculadora/)  
-### [Capa de Harry Potter](capa_HP/)  
-### [Caras](caras/)  
-### [Detección de manos](deteccion_manos/) 
-### [Dibujo de astronauta](dibujo_astronauta/) 
-### [Paramétricas](parametricas/) 
-### [Pixel Art](pixelart/) 
-### [Pong](pong/)  
-### [Proyecto final](proyecto_final/)  
-=======
-# 🎨 Procesamiento Digital de Imágenes con OpenCV y MediaPipe
+---
 
-Repositorio académico que contiene implementaciones de algoritmos de procesamiento digital de imágenes, visión por computadora y aplicaciones interactivas usando OpenCV y MediaPipe.
+## Descripción Detallada de Proyectos
 
-## 📋 Descripción
+### calculadora.py
+Calculadora interactiva que utiliza la cámara y la librería MediaPipe para detectar gestos de las manos. Los dedos índices permiten seleccionar botones virtuales mostrados en pantalla, realizando operaciones aritméticas básicas tras una breve pausa sobre cada botón.
 
-Este repositorio reúne una colección de proyectos y algoritmos implementados en Python para el procesamiento digital de imágenes, incluyendo detección de objetos, manipulación de píxeles, transformaciones geométricas, visión por computadora en tiempo real y aplicaciones interactivas.
+### invisibilidad.py
+Implementa el efecto de "capa de invisibilidad" mediante sustitución de fondo. Detecta objetos verdes en tiempo real y los reemplaza con un fondo previamente capturado, simulando transparencia.
 
-## 🛠️ Tecnologías Utilizadas
+### deteccion.py
+Detector de rostros con animaciones gráficas superpuestas. Utiliza Haar Cascades para la detección facial y dibuja elementos animados
 
-- **OpenCV 4.x** - Procesamiento de imágenes y visión computacional
-- **MediaPipe** - Detección de manos y seguimiento facial
-- **NumPy** - Cálculos numéricos y manipulación de matrices
-- **Matplotlib** - Visualización de datos e imágenes
+### centroide.py, centroide2.py, centroide_sin_contorno.py
+Tres enfoques para el cálculo de centroides en figuras geométricas:
+- **centroide.py**: Uso de momentos de contornos con OpenCV.
+- **centroide2.py**: Cálculo manual iterando sobre píxeles.
+- **centroide_sin_contorno.py**: Método por conectividad y sin uso de contornos, separando figuras mediante inundación (flood fill).
 
-## 📁 Estructura del Proyecto
+### agrandar_cuadrado.py y distancia.py
+Proyectos que utilizan MediaPipe Hands para medir la distancia entre los pulgares de ambas manos y ajustar proporcionalmente el tamaño de un cuadrado en pantalla. `distancia.py` es una variación que enfatiza la medición y visualización de la distancia.
 
-### 01_Introduccion_OpenCV
-Scripts básicos para familiarizarse con OpenCV:
-- `first_script_opencv.py` - Primer contacto con OpenCV
-- `img_cv.py` - Conversiones entre espacios de color
-- `video.py` - Procesamiento básico de video
+### manos.py
+Detección básica de manos y dibujo de landmarks y conexiones en tiempo real. Sirve como base para proyectos de interacción gestual.
 
->>>>>>> c2e4541 (Proyecto final: Filtro y otras actividades, mejoras en el proyecto de la pizarra y creacion de archivos extra como requirements entre otros)
-### 02_Operadores_Puntuales
-Manipulación directa de píxeles:
-- `operador_puntual.py` - Transformaciones pixel a pixel
-- `split_and_merge_img.py` - Separación y combinación de canales RGB
+### figura.py
+Creación de una figura de astronauta utilizando únicamente primitivas gráficas de OpenCV (rectángulos, círculos, polígonos). Demuestra composición de imágenes mediante formas básicas.
 
-### 03_Transformaciones_Geometricas
-Transformaciones espaciales de imágenes:
-- `rotacion.py` - Rotación manual de imágenes
-- `bilinieal.py` - Filtrado bilineal y transformaciones
-- `escalado_primitivas.py` - Escalado interactivo con manos
+### operador_puntual.py
+Aplicación de un operador de umbralización para binarizar una imagen. Convierte píxeles por encima de un valor en blanco y el resto en negro.
 
-### 04_Detectores_Caracteristicas
-Detección y análisis de características:
-- `centroide.py`, `centroide2.py`, `centroide3.py` - Cálculo de centroides
-- `centroide_without_contorno.py` - Métodos alternativos para centroides
+### rotacion.py
+Rotación manual de una imagen aplicando transformaciones geométricas sin usar funciones predefinidas de OpenCV. Implementa la matriz de rotación con senos y cosenos.
 
-### 05_Procesamiento_Video
-Aplicaciones en tiempo real:
-- `capa_invisibilidad.py` - Efecto de capa de invisibilidad
-- `pong.py` - Juego clásico implementado con OpenCV
-- `varita_magica.py` - Dibujo interactivo por detección de color
+### split_merge.py
+Manipulación de canales de color: separación de canales RGB y recombinación en diferentes órdenes para crear efectos cromáticos.
 
-### 06_MediaPipe
-Aplicaciones con detección de manos y gestos:
-- `deteccion_mano_mediapipe.py` - Detección básica de manos
-- `manos_distancia.py` - Medición de distancia entre manos
-- `calculadora_mediapipe.py` - Calculadora controlada por gestos
-- `Actividad_Original.py` - Reconocimiento de señas manuales
+### video.py
+Captura de video en tiempo real y procesamiento frame a frame, aplicando división de canales y recombinación para mostrar variaciones de color.
 
-### 07_Pixel_Art
-Generación de arte pixelado:
-- `tux_pixel_art.py` - Creación de pixel art del pingüino Tux
+### Introduccion.py y piramide.py
+Introducción a OpenGL mediante GLFW:
+- **Introduccion.py**: Dibujo de primitivas 2D (cuadrados, triángulos) con transformaciones básicas.
+- **piramide.py**: Creación de una pirámide 3D con rotación continua, manejo de profundidad y proyección en perspectiva.
 
-### 08_Primitivas_Geometricas
-Dibujo con formas geométricas:
-- `lego.py` - Construcción de figuras con primitivas
+### parametricas.py
+Animación de una curva paramétrica (Limacon) que se dibuja progresivamente en pantalla, ilustrando el concepto de ecuaciones paramétricas en gráficos.
 
-### 09_Sistema_Pintura_Avanzado
-Sistema interactivo de dibujo:
-- `sistema_pintura_color.py` - Pintura por detección de color con modos avanzados
+### pixel_art.py
+Generación de un robot en estilo pixel art usando una matriz de píxeles y ampliación con interpolación nearest-neighbor para mantener los bordes definidos.
 
-### 10_Curvas_Parametricas
-Generación de curvas matemáticas:
-- `parametricas.py` - Cardioide, hipocicloide y curvas de Lissajous
+### pong.py
+Implementación básica del clásico juego Pong con OpenCV, mostrando el movimiento y rebote de una pelota en un canvas.
 
-### 11_Detector_Facial
-Detección y análisis facial:
-- `detectarCara.py` - Detección facial básica con elementos gráficos
-- `detectarCara_avanzado.py` - Detección facial con animaciones avanzadas
+### varita_magica.py y varita_magica_2.py
+Sistema de pintura virtual controlado por detección de color:
+- **varita_magica.py**: Permite dibujo libre y colocación de figuras básicas (círculos, rectángulos, líneas) con un objeto naranja.
+- **varita_magica_2.py**: **Iteración y mejora** que agrega detección de múltiples colores, permitiendo cambiar el color del trazo dinámicamente y ampliando las opciones de figuras.
 
-## 🚀 Instalación y Uso
+### deteccion_rostro.py
+Filtro de realidad aumentada que superpone una máscara facial 3D animada sobre el rostro detectado, usando MediaPipe Face Mesh y OpenGL para renderizado.
 
-### Requisitos Previos
-Python 3.8 o superior
-<<<<<<< HEAD
-=======
->>>>>>> fb0261f (.)
->>>>>>> c2e4541 (Proyecto final: Filtro y otras actividades, mejoras en el proyecto de la pizarra y creacion de archivos extra como requirements entre otros)
+### filto.py y filto2.py
+Filtros tipo Snapchat con animaciones y elementos robóticos:
+- **filto.py**: Prototipo inicial con máscara facial gris, antena animada y barra de ojos que cambia de color.
+- **filto2.py**: **Iteración y mejora significativa** que incluye un rostro robótico más detallado, cejas, boca con visualizador de ondas (equalizer), mejor iluminación y estabilidad en la detección. Además, se añaden elementos como tornillos decorativos y un sistema de parpadeo más natural.
+
+---
+
+## Requisitos e Instalación
+
+Para ejecutar los proyectos, se recomienda un entorno con Python 3.8 o superior y las siguientes librerías:
+opencv-python
+mediapipe
+numpy
+glfw
+PyOpenGL
+
+text
+
+Puedes instalar las dependencias con:
+
+```bash
+pip install -r requirements.txt 
+
+Este repositorio documenta el aprendizaje y aplicación de técnicas de graficación y visión computacional a lo largo del curso. Los proyectos abarcan desde fundamentos hasta aplicaciones interactivas, mostrando el uso de herramientas modernas como MediaPipe y OpenGL. Cada archivo es autocontenido y puede ejecutarse de manera independiente, sirviendo como referencia para futuros desarrollos en el área.

@@ -63,7 +63,6 @@ class SistemaPintura:
     def detectar_lapiz(self, frame):
         hsv = cv.cvtColor(frame, cv.COLOR_BGR2HSV)
         
-        # Detectar todos los colores
         detecciones = {}
         
         for color_nombre, color_info in self.colores.items():
@@ -89,7 +88,6 @@ class SistemaPintura:
                             "area": area
                         }
         
-        # Encontrar la detección con mayor área (el lápiz más prominente)
         if detecciones:
             color_detectado = max(detecciones.items(), key=lambda x: x[1]["area"])[0]
             punto = detecciones[color_detectado]["punto"]
@@ -157,7 +155,6 @@ class SistemaPintura:
             elif self.estado_figura == "tamano":
                 self.tamano_temporal = self.calcular_parametro_segun_x(x, 10, 100)
             
-            # SOLO DIBUJAR EN EL FRAME DE CÁMARA (NO EN EL LIENZO)
             if self.posicion_temporal:
                 self.dibujar_figura_rotada(frame, self.posicion_temporal, 
                                          self.figura_actual, self.tamano_temporal, 
@@ -169,7 +166,6 @@ class SistemaPintura:
                 cv.line(frame, (320, 0), (320, 480), (255, 255, 0), 1)
     
     def confirmar_figura(self, color_detectado):
-        # SOLO DIBUJAR EN EL LIENZO CUANDO SE CONFIRMA EN EL ESTADO "tamano"
         if self.estado_figura == "tamano" and self.posicion_temporal:
             self.dibujar_figura_rotada(self.lienzo, self.posicion_temporal,
                                      self.figura_actual, self.tamano_temporal,

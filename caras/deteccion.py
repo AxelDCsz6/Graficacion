@@ -135,7 +135,7 @@ class DetectorRostroAnimado:
                 self.direccion_movimiento_lengua *= -1
                 
     def ejecutar_deteccion(self):
-        print("👁️ Detector Facial Animado activado")
+        print("Detector Facial Animado activado")
         print("Presiona ESC para finalizar")
         
         while True:

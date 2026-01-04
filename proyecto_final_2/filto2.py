@@ -7,17 +7,16 @@ from OpenGL.GL import *
 from OpenGL.GLU import *
 
 # ============================================================
-# CONFIGURACIÓN FINAL
+# CONFIGURACIÓN INICIAL 
 # ============================================================
 WINDOW_WIDTH = 1280
 WINDOW_HEIGHT = 720
-WINDOW_TITLE = "Filtro Robot: Final Version"
+WINDOW_TITLE = "Filtro Robot"
 
 SCALE_FACTOR = 2.5
 WIDTH_SCALE = 1.4
 
-# COLORES FINALIZADOS
-# Gris plata muy claro (casi blanco metálico)
+# COLORES
 COLOR_GRAY_BOX = (0.9, 0.9, 0.92) 
 COLOR_DARK_GRAY = (0.5, 0.5, 0.55)
 COLOR_CYAN = (0.0, 1.0, 1.0)
@@ -110,26 +109,23 @@ def draw_tech_ring(x, y, z, radius, color, segments=16, rot_angle=0):
     glPopMatrix()
     glEnable(GL_LIGHTING)
 
-# ANTENA SIMPLIFICADA (ESTÁTICA)
+# ANTENA
 def draw_antenna(x, y, z):
     glPushMatrix()
     glTranslatef(x * SCALE_FACTOR * WIDTH_SCALE, y * SCALE_FACTOR, z * SCALE_FACTOR)
     
     quad = gluNewQuadric()
     
-    # 1. Base pequeña (Gris oscuro)
     glColor3f(0.3, 0.3, 0.3)
-    glRotatef(-90, 1, 0, 0) # Orientar hacia arriba
+    glRotatef(-90, 1, 0, 0)
     gluCylinder(quad, 0.03 * SCALE_FACTOR, 0.02 * SCALE_FACTOR, 0.05 * SCALE_FACTOR, 10, 2)
     
-    # 2. Varilla metálica (Delgada y estática)
     glTranslatef(0, 0, 0.05 * SCALE_FACTOR)
     glColor3f(0.6, 0.6, 0.6)
     gluCylinder(quad, 0.008 * SCALE_FACTOR, 0.008 * SCALE_FACTOR, 0.15 * SCALE_FACTOR, 8, 2)
     
-    # 3. Punta de luz (Estática)
     glTranslatef(0, 0, 0.15 * SCALE_FACTOR)
-    glColor3f(1.0, 0.2, 0.2) # Luz roja fija suave
+    glColor3f(1.0, 0.2, 0.2)
     gluSphere(quad, 0.02 * SCALE_FACTOR, 10, 10)
     
     gluDeleteQuadric(quad)
@@ -151,7 +147,6 @@ def draw_equalizer_mouth(center_top, center_bottom, open_ratio):
         glColor3f(0.2, 1.0, 0.2)
         spacing = 0.03 * SCALE_FACTOR
         
-        # Altura suave y limitada
         max_height = 0.12 * SCALE_FACTOR
         current_h = max_height * open_ratio 
         
@@ -191,7 +186,6 @@ def draw_robot_box_face(lm_list):
     
     real_height = abs(top[1] - chin[1]) * SCALE_FACTOR
     
-    # Proporciones "Cartoon" (Caja ancha)
     height_half = (real_height * 1.1) / 2.0
     width_half = (real_height * 1.3) / 2.0 
     
@@ -202,7 +196,6 @@ def draw_robot_box_face(lm_list):
     
     glTranslatef(world_cx, world_cy, world_cz)
     
-    # Placa Gris Clara (Casi Blanca)
     glColor3f(*COLOR_GRAY_BOX)
     glBegin(GL_QUADS)
     glVertex3f(-width_half, -height_half, 0)
@@ -211,7 +204,6 @@ def draw_robot_box_face(lm_list):
     glVertex3f(-width_half, height_half, 0)
     glEnd()
     
-    # Borde
     glDisable(GL_LIGHTING)
     glLineWidth(5.0)
     glColor3f(*COLOR_DARK_GRAY)
@@ -223,7 +215,6 @@ def draw_robot_box_face(lm_list):
     glEnd()
     glEnable(GL_LIGHTING)
     
-    # Tornillos
     glColor3f(0.8, 0.8, 0.8)
     screw_offset = 0.02 * SCALE_FACTOR
     screw_size = 0.015
@@ -244,7 +235,6 @@ def draw_robot_box_face(lm_list):
 def render_robot_filter(face_landmarks):
     glEnable(GL_DEPTH_TEST)
     glClear(GL_DEPTH_BUFFER_BIT)
-    
     glMatrixMode(GL_PROJECTION); glPushMatrix(); glLoadIdentity()
     gluPerspective(50, WINDOW_WIDTH/WINDOW_HEIGHT, 0.1, 100)
     
@@ -254,7 +244,6 @@ def render_robot_filter(face_landmarks):
     setup_lights()
     lm = face_landmarks.landmark
     
-    # Cálculos de Estado
     left_eye_dist = calculate_distance(lm, LEFT_EYE_TOP, LEFT_EYE_BOTTOM)
     right_eye_dist = calculate_distance(lm, RIGHT_EYE_TOP, RIGHT_EYE_BOTTOM)
     mouth_dist = calculate_distance(lm, MOUTH_TOP, MOUTH_BOTTOM)
@@ -265,10 +254,8 @@ def render_robot_filter(face_landmarks):
     open_ratio = (mouth_dist - min_mouth) / (max_mouth - min_mouth)
     open_ratio = max(0.0, min(open_ratio, 1.0))
 
-    # 1. Cara (Caja Gris Plata)
     draw_robot_box_face(lm)
 
-    # 2. Ojos
     if len(lm) > 468:
         lp = norm_landmark(lm[468]); rp = norm_landmark(lm[473])
     else:
@@ -290,7 +277,6 @@ def render_robot_filter(face_landmarks):
         glEnd()
         glEnable(GL_LIGHTING)
     else:
-        # Anillos giratorios en ojos
         draw_tech_ring(lp[0], lp[1], lp[2], 0.025, eye_color, 12, rot_anim)
         draw_tech_ring(lp[0], lp[1], lp[2], 0.045, eye_color, 8, -rot_anim)
         draw_sphere_at(lp[0], lp[1], lp[2], 0.01, (1,1,1))
@@ -298,12 +284,10 @@ def render_robot_filter(face_landmarks):
         draw_tech_ring(rp[0], rp[1], rp[2], 0.045, eye_color, 8, -rot_anim)
         draw_sphere_at(rp[0], rp[1], rp[2], 0.01, (1,1,1))
 
-    # 3. Boca
     mp_top = norm_landmark(lm[MOUTH_TOP])
     mp_btm = norm_landmark(lm[MOUTH_BOTTOM])
     draw_equalizer_mouth(mp_top, mp_btm, open_ratio)
 
-    # 4. Antena (ESTÁTICA)
     forehead = norm_landmark(lm[10])
     draw_antenna(forehead[0], forehead[1], forehead[2])
 

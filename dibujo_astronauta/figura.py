@@ -70,12 +70,12 @@ def crear_astronauta():
     return lienzo
 
 def main():
-    print("🚀 Creando figura de astronauta...")
+    print("Creando figura de astronauta...")
     astronauta = crear_astronauta()
     
     cv.imshow('Astronauta Espacial', astronauta)
     cv.imwrite('astronauta.png', astronauta)
-    print("💾 Astronauta guardado como 'astronauta.png'")
+    print("Astronauta guardado como 'astronauta.png'")
     
     cv.waitKey(0)
     cv.destroyAllWindows()
